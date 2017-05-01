@@ -21,7 +21,7 @@ module Fastbillr
       end
 
       def find_by_invoice_number(id)
-        response = Fastbillr::Request.post({"SERVICE" => "invoice.get", "FILTER" => {"INVOICE_NUMBER" => id.to_i}}.to_json)
+        response = Fastbillr::Request.post({"SERVICE" => "invoice.get", "FILTER" => {"INVOICE_NUMBER" => id}}.to_json)
         new(response["INVOICES"][0]) if !response["INVOICES"].empty?
       end
 
