@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Fastbillr::VERSION
 
-  gem.add_dependency "excon", "~> 0.31.0"
+  gem.add_dependency "excon", "~> 0.31"
   gem.add_dependency "hashie", "~> 2.0.5"
   gem.add_dependency "jruby-openssl" if RUBY_PLATFORM == 'java'
 
